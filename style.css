@@ -1,0 +1,44 @@
+body {
+	background-color: #1c1d22;												
+}							
+
+.manga1 {
+	padding: 10px;
+	background: #272731;
+	color: white;
+	border: 5px solid #272731;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-size: 10px;
+	text-align: center;
+	margin: 30px 40px;
+
+	
+}
+
+.manga2 {
+	padding: 10px;
+	background: #272731;
+	color: white;
+	border: 5px solid #272731;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-size: 10px;
+	text-align: center;
+	margin: 30px 40px;
+	
+}
+
+.comprarbuttom {
+	border: 1px solid #5965ed; 
+    padding: 10px 20px;
+    background-color: #5965ed;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica', sans-seri;
+    border-radius: 50px;
+	
+}
