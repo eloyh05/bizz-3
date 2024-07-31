@@ -1,44 +1,45 @@
-body {
-	background-color: #1c1d22;												
-}							
-
-.manga1 {
-	padding: 10px;
-	background: #272731;
-	color: white;
-	border: 5px solid #272731;
-	border-radius: 10px;
-	text-transform: uppercase;
-	font-family: sans-serif;
-	font-size: 10px;
-	text-align: center;
-	margin: 30px 40px;
-
-	
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1f2329;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.manga2 {
-	padding: 10px;
-	background: #272731;
-	color: white;
-	border: 5px solid #272731;
-	border-radius: 10px;
-	text-transform: uppercase;
-	font-family: sans-serif;
-	font-size: 10px;
-	text-align: center;
-	margin: 30px 40px;
-	
+h3{
+    height: 160px;
+    font: sans-serif;
 }
 
-.comprarbuttom {
-	border: 1px solid #5965ed; 
-    padding: 10px 20px;
-    background-color: #5965ed;
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Helvetica', sans-seri;
-    border-radius: 50px;
-	
+.heart{
+    height: 70px;
+    width: 70px;
+    background-color: #1E86DB;
+    position: relative;
+    box-shadow: 10px 10px 90px #1E86DB;
+    animation: animheart .5s linear infinite;
+}
+
+.heart::before{
+    content:  '';
+    position: absolute;
+    height:70px;
+    width: 70px;
+    background-color: #1E86DB;
+    box-shadow: 10px 10px 90px #1E86DB;
+    top: -50%;
+    border-radius: 50%;
+}
+
+.heart::after{
+    content:  '';
+    position: absolute;
+    height:70px;
+    width: 70px;
+    background-color: #1E86DB;
+    box-shadow: 10px 10px 90px #1E86DB;
+    right: -50%;
+    border-radius: 50%;
 }
