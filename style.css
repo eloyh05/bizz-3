@@ -1,45 +1,103 @@
 body{
-    margin: 0;
-    padding: 0;
-    background-color: #1f2329;
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #1C1D22;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+        .card {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(145deg, #27272F 0%, #27272F 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .heart {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #1D7DED;
+            transform: rotate(-45deg);
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            animation: heartbeat 1s infinite;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #1D7DED;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 50px;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(-45deg);
+            }
+        }
+        .message {
+            font-size: 24px;
+            color: white;
+            z-index: 1;
+          
+            
+            
+        }
+        
+        .heart {
+          box-shadow: 10px 10px 90px #1D7DED;
+        }
+        @keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 }
 
-h3{
-    height: 160px;
-    font: sans-serif;
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white;
+  }
 }
 
-.heart{
-    height: 70px;
-    width: 70px;
-    background-color: #1E86DB;
-    position: relative;
-    box-shadow: 10px 10px 90px #1E86DB;
-    animation: animheart .5s linear infinite;
-}
-
-.heart::before{
-    content:  '';
-    position: absolute;
-    height:70px;
-    width: 70px;
-    background-color: #1E86DB;
-    box-shadow: 10px 10px 90px #1E86DB;
-    top: -50%;
-    border-radius: 50%;
-}
-
-.heart::after{
-    content:  '';
-    position: absolute;
-    height:70px;
-    width: 70px;
-    background-color: #1E86DB;
-    box-shadow: 10px 10px 90px #1E86DB;
-    right: -50%;
-    border-radius: 50%;
+.message {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
 }
